@@ -1,0 +1,27 @@
+.playbook-logo {
+  margin-top: 6rem;
+}
+
+.playbook-header {
+  background: $main-1;
+  padding-top: 2rem;
+  padding-bottom: 8rem;
+
+  h1, p {
+    color: white;
+  }
+
+  h1 {
+    font-size: 2.6rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin: 2rem 0;
+  }
+}
+
+.plays-list-container {
+  padding: 6rem 0;
+  background: $main-5;
+}

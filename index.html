@@ -3,85 +3,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>The Digital Services Playbook — from the U.S. Digital Service</title>
+  <title>The Digital Services Playbook — from the U-M Library</title>
   <meta charset='UTF-8'/>
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-  <link href='//fonts.googleapis.com/css?family=Merriweather:400,300,700|Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
-  <link rel='shortcut icon' href='{{site.baseurl}}/assets/images/favicon.ico' type='image/x-icon' />
-  <link rel="icon" type="image/png" href="{{site.baseurl}}/assets/images/favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="{{site.baseurl}}/assets/images/favicon-16x16.png" sizes="16x16" />
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,700|Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
   <link href='{{site.baseurl}}/assets/css/styles.css' rel='stylesheet' />
 </head>
 
 <body>
-
-<div id="navigation_bar">
-   <div class="outer_container">
-    <div class="inner_container">
-
-      <a href="#introduction"><h3>Digital Services Playbook</h3></a>
-      <ul class="nav">
-        {% for play in site.plays %}
-          <li class="play_square"><a href="#play{{ play.play_number }}" title="View Play {{ play.play_number }}: {{ play.title }}">{{ play.play_number }}</a></li>
-        {% endfor %}
-      </ul>
-      <div id="menu_icon">
-        <a href="#plays_index_anchor" title="Return to Index"></a>
+  <header>
+    <div class="header-alt">
+      <div class="container">
+        <div class="header-container-alt playbook-logo">
+          <a href="umich.edu" title="Link to the University of Michigan website.">
+            <img src="{{site.baseurl}}/assets/images/umich_block_m.png" alt="Logo of the University of Michigan." class="header-logo-image-alt">
+          </a>
+          <a href="umich.edu" title="Link to the University of Michigan website.">
+            <img src="{{site.baseurl}}/assets/images/mlibrary_logo.png" alt="Logo of the University of Michigan." class="header-logo-image-alt">
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-</div>
+  </header>
 
-<div id="introduction">
-  <div class="outer_container">
-    <div class="inner_container">
-      <a id="usds_logo" href="https://www.usds.gov" title="Link to the United States Digital Service"><img src='{{site.baseurl}}/assets/images/USDS-logo-rays-transparent.png' alt="Logo of the United States Digital Service"></a>
-      {% capture introduction %}{% include introduction.md %}{% endcapture %}
-      {{ introduction | markdownify }}
-      <div class="button">
-        <a href="#plays_index_anchor" title="View the Plays">See the plays</a>
-      </div>
-      <div class="button">
-        <a href="https://github.com/whitehouse/playbook#readme" title="Visit Github to Improve This Content">Help improve this content</a>
+  <main>
+    <div class="playbook-header">
+      <div class="container">
+        {% capture introduction %}{% include introduction.md %}{% endcapture %}
+        {{ introduction | markdownify }}
+
+        <a href="#plays_index_anchor" class="button">See the plays</a>
       </div>
     </div>
-  </div>
-</div>
 
-<div id="plays_index">
-  <div class="outer_container">
-    <div class="inner_container">
+    <article>
       <a class="anchor_offset" id="plays_index_anchor"></a>
-      <h2>Digital Service Plays</h2>
-      <div class="columns">
-        <ol>
-        {% for play in site.plays %}
-          <li><a href="#play{{ play.play_number }}" title="View Play {{ play.play_number }}">{{ play.title }}</a></li>
-        {% endfor %}
-        </ol>
+      <div class="plays-list-container">
+        <div class="container">
+          <h2>Digital Service Plays</h2>
+          <ol class="plays-list">
+          {% for play in site.plays %}
+            <li><a href="#play{{ play.play_number }}" title="View Play {{ play.play_number }}">{{ play.title }}</a></li>
+          {% endfor %}
+          </ol>
+        </div>
       </div>
-      <div class="button">
-        <a href="#play1" title="View the In Detail">In detail</a>
+
+      <div class="container">
+        <div class="plays">
+          {% for play in site.plays %}
+            <section class="play">
+              <a class="anchor_offset" id="play{{ play.play_number }}"></a>
+              <h6>PLAY {{ play.play_number }}</h6>
+              <h2 class="display">{{ play.title }}</h2>
+
+              {{ play.output }}
+            </section>
+          {% endfor %}
+        </div>
       </div>
-    </div>
-  </div>
-</div>
-
-<div id="plays" class="outer_container">
-  {% for play in site.plays %}
-    <div class="inner_container">
-      <a class="anchor_offset" id="play{{ play.play_number }}"></a>
-      <h6>PLAY {{ play.play_number }}</h6>
-      <h2 class="display">{{ play.title }}</h2>
-
-      {{ play.output }}
-    </div>
-  {% endfor %}
-</div>
-
-<script src='{{site.baseurl}}/assets/js/jquery-1.11.1.min.js'></script>
-<script src='{{site.baseurl}}/assets/js/scrollspy.js'></script>
-<script src='{{site.baseurl}}/assets/js/site.js'></script>
-<script id="_fed_an_js_tag" type="text/javascript" src="{{site.baseurl}}/assets/js/federated-analytics.all.min.js?agency=GSA&sub-agency=OGP"></script>
+    </article>
+  </main>
 </body>
 </html>
