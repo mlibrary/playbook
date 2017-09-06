@@ -1,27 +1,39 @@
 .playbook-logo {
-  margin-top: 6rem;
+  @media (min-width: 42rem) {
+    margin-top: 4rem;
+  }
+}
+
+.header-logo-image-alt {
+  max-height: 2.8rem;
 }
 
 .playbook-header {
   background: $main-1;
   padding-top: 2rem;
-  padding-bottom: 8rem;
+  padding-bottom: 5rem;
 
   h1, p {
     color: white;
   }
 
-  h1 {
-    font-size: 2.6rem;
+  @media (min-width: 42rem) {
+    h1 {
+      font-size: 2.6rem;
+    }
   }
 
   p {
     font-size: 1.2rem;
     margin: 2rem 0;
   }
+
+  .button {
+    margin-bottom: 1rem;
+  }
 }
 
 .plays-list-container {
-  padding: 6rem 0;
+  padding: 4rem 0;
   background: $main-5;
 }
