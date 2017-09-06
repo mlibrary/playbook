@@ -4,7 +4,7 @@ The University of Michigan faculty, students, and staff expect to interact with 
 
 One way to advance smarter digital service delivery is by putting the right processes and practices in place to drive outcomes and accountability and allow people to do their best work. The Digital Services Playbook documents these best practices and processes:
 
-- [**The Digital Services Playbook**](https://playbook.cio.gov "Link to the Digital Services Playbook") identifies a series of “plays” drawn from successful best practices from the private sector and government that, if followed together, will help government build effective digital services.  The plays outline an approach to delivering services that increases our ability to be flexible, iterative and, most importantly, to focus on the needs of the people that use our services.
+- [**The Digital Services Playbook**](https://mlibrary.github.io/playbook "Link to the Digital Services Playbook") identifies a series of “plays” drawn from successful best practices from the private sector and government that, if followed together, will help to build effective digital services. The plays outline an approach to delivering services that increases our ability to be flexible, iterative and, most importantly, to focus on the needs of the people that use our services.
 
 ## We Want Your Feedback
 We encourage your feedback and suggestions on these documents. Content and feature suggestions and discussions are welcome via [GitHub Issues](https://github.com/mlibrary/playbook/issues). You may also propose changes to the content directly by submitting a [pull request](https://help.github.com/articles/creating-a-pull-request "More Information on Submitting Pull Requests").
